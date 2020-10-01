@@ -24,7 +24,7 @@
 	</style>
 </head>
 
-<body onload="makeCode();">
+<body onload="//makeCode();">
 	
 	<div class="container">
 		<div id="verQR">
@@ -39,7 +39,11 @@
 	
 
 	<script type="text/javascript">
-		
+				    
+		document.addEventListener("DOMContentLoaded", function(event) {
+    makeCode();
+  });
+				      
 		function makeCode() {
 			const qrcode = new QRCode("qrcode");
 			const mensaje_usuario = document.getElementById("mensaje_usuario");
